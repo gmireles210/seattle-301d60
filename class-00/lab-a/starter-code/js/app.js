@@ -37,7 +37,7 @@ function displayPics(){
   }
   //console.log(rando);
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the variable declaration from `var' to `let`.
-  // I believe this happened because the differences between var and let, as let can only be available inside the scope it has declared.
+  // I believe this happened because the differences between var, const, and let, as let can only be available inside the scope it has declared and you also have to change the const allProducts up at the top, back to let in order for code to work.
   //console.log(viewed);
 
   for (let i = 0; i < 3; i++){

@@ -112,7 +112,7 @@ const sum = (a, b, c, d) => `${a} + ${b} + ${c} + ${d} = ${a + b + c + d}`;
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
-//---------------------DONE-------------------------------------
+//---------------------Complete-------------------------------------
 
 const objectLit = array => ({
   key1: 'value1',
@@ -122,7 +122,7 @@ const objectLit = array => ({
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
 
-//-------------------------DONE---------------------------------
+//-------------------------Complete---------------------------------
 
 const sumAndProduct = (a, b) => {
   let sum = a + b;
@@ -134,7 +134,7 @@ const sumAndProduct = (a, b) => {
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
 
-//------------------------DONE----------------------------------
+//------------------------Complete----------------------------------
 
 let message = (name) => {
   return `Hello, ${name}!`;
@@ -143,7 +143,7 @@ let message = (name) => {
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(message('Allie'));
 
-//------------------------DONE----------------------------------
+//------------------------Complete----------------------------------
 
 let Student = function(name, age, hometown) {
   this.name = name;
@@ -160,7 +160,7 @@ console.log(joe);
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
 
-//--------------------------DONE--------------------------------
+//--------------------------Complete--------------------------------
 
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
@@ -172,7 +172,7 @@ console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
-//-----------------------DONE-----------------------------------
+//-----------------------Complete-----------------------------------
 
 Student.courseName = () => {
   return 'This student is enrolled in Code 301.';
@@ -181,8 +181,6 @@ Student.courseName = () => {
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(Student.courseName());
 
-
-//----------------------------------------------------------
 
 // STEP 11
 // How do arrow functions affect constructor functions?
@@ -200,10 +198,10 @@ Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//The 'this' bubbles up and refers to the window object.
+//The 'this' jumps up and refers to the window object.
 //
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//The 'this' bubbles up and refers to the window object also. 
+//The 'this' jumps up and refers to the window object also. 
 
 // 3. Explain why "this" is different when an arrow function is used.
-//Arrow functions do not bind the 'contextual this' in an object. This this will refer to the global window object so I will not use arrow functions with anything that uses 'this'.
+//Arrow functions do not stick to the 'contextual this' in an object. This this will refer to the global object so I wont use the arrow functions with anything that uses 'this'.

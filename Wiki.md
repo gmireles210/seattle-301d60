@@ -49,60 +49,60 @@ It is an attempt to document a consistent approach to site development when usin
 
 ## Outline Notes For Handlebars.js
 
--Powerful popular template engine that is simple and has a large community supporting it
--Based on Mustache template language
---How to add it to your project
----Download the file and call it from script
----Use a CDN-hosted version
--Templates
---Recommended way of adding templates to your page is by including them in <script> tags
---Remember the attribute type so JS doesn't try to parse them
--Expressions
---{{}} -- will get HTML escaped by handlebars
---{{{}}} -- allows you to print raw HTML
--Context
---use helpers such as:
----#each
----#with
---above helpers allow you to access the properties of iterated objects
--Helpers
---To call a helper, just use it as an expression - {{helpername}}
---You can pass parameters as well - {{helpername 12345}}
---these are passed as parameters to your helper function
--Block Helpers
---Like reg. helpers but have an opening and a closing tag
---To create a block helper, you again use Handlebars.registerHelper()
+- Powerful popular template engine that is simple and has a large community supporting it
+- Based on Mustache template language
+-- How to add it to your project
+--- Download the file and call it from script
+--- Use a CDN-hosted version
+- Templates
+-- Recommended way of adding templates to your page is by including them in <script> tags
+-- Remember the attribute type so JS doesn't try to parse them
+- Expressions
+-- {{}} -- will get HTML escaped by handlebars
+-- {{{}}} -- allows you to print raw HTML
+- Context
+-- use helpers such as:
+--- #each
+--- #with
+-- above helpers allow you to access the properties of iterated objects
+- Helpers
+-- To call a helper, just use it as an expression - {{helpername}}
+-- You can pass parameters as well - {{helpername 12345}}
+-- these are passed as parameters to your helper function
+- Block Helpers
+-- Like reg. helpers but have an opening and a closing tag
+-- To create a block helper, you again use Handlebars.registerHelper()
  
 
 ## Outline Notes for Flexbox
 
--Basic Terminology
---Main-axis
---Main-start | Main-end
---Main size
---Cross axis
---Cross-start | Cross-end
---Cross size
--Properties for the Parent (Flex Container)
---Display
---Flex-direction
---Flex-wrap
---Flex-flow
---Justify-content
---Align-items
---Align-content
--Properties for the Children
---Order
---Flex-grow
---Flex-shrink
---Flex-basis
---Flex
---Align-self
+- Basic Terminology
+-- Main-axis
+-- Main-start | Main-end
+-- Main size
+-- Cross axis
+-- Cross-start | Cross-end
+-- Cross size
+- Properties for the Parent (Flex Container)
+-- Display
+-- Flex-direction
+-- Flex-wrap
+-- Flex-flow
+-- Justify-content
+-- Align-items
+-- Align-content
+- Properties for the Children
+-- Order
+-- Flex-grow
+-- Flex-shrink
+-- Flex-basis
+-- Flex
+-- Align-self
  
 
 ## FlexBox Froggy
 
--Useful CSS playground to practice your CSS skills
+- Useful CSS playground to practice your CSS skills
  
 
 ## Official Handlebars.js Documentation:

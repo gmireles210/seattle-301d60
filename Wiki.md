@@ -80,9 +80,13 @@ It is an attempt to document a consistent approach to site development when usin
 
 - Basic Terminology
 -- Main-axis
+
 -- Main-start | Main-end
+
 -- Main size
+
 -- Cross axis
+
 -- Cross-start | Cross-end
 -- Cross size
 - Properties for the Parent (Flex Container)

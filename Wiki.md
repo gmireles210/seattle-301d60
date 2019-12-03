@@ -60,16 +60,16 @@ It is an attempt to document a consistent approach to site development when usin
 -- Recommended way of adding templates to your page is by including them in <script> tags
 -- Remember the attribute type so JS doesn't try to parse them
 - Expressions
--- {{}} -- will get HTML escaped by handlebars
--- {{{}}} -- allows you to print raw HTML
+-- {{}} will get HTML escaped by handlebars
+-- {{{}}} allows you to print raw HTML
 - Context
 -- use helpers such as:
 --- #each
 --- #with
 -- above helpers allow you to access the properties of iterated objects
 - Helpers
--- To call a helper, just use it as an expression - {{helpername}}
--- You can pass parameters as well - {{helpername 12345}}
+-- To call a helper, just use it as an expression {{helpername}}
+-- You can pass parameters as well {{helpername 12345}}
 -- these are passed as parameters to your helper function
 - Block Helpers
 -- Like reg. helpers but have an opening and a closing tag

@@ -88,21 +88,37 @@ It is an attempt to document a consistent approach to site development when usin
 -- Cross axis
 
 -- Cross-start | Cross-end
+
 -- Cross size
+
 - Properties for the Parent (Flex Container)
+
 -- Display
+
 -- Flex-direction
+
 -- Flex-wrap
+
 -- Flex-flow
+
 -- Justify-content
+
 -- Align-items
+
 -- Align-content
+
 - Properties for the Children
+
 -- Order
+
 -- Flex-grow
+
 -- Flex-shrink
+
 -- Flex-basis
+
 -- Flex
+
 -- Align-self
  
 

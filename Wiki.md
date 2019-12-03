@@ -47,6 +47,8 @@ It is an attempt to document a consistent approach to site development when usin
 - Job Interview Readiness
 - Work Environment Readiness
 
+# Reading 3
+
 ## Outline Notes For Handlebars.js
 
 - Powerful popular template engine that is simple and has a large community supporting it

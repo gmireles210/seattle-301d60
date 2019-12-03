@@ -79,6 +79,7 @@ It is an attempt to document a consistent approach to site development when usin
 ## Outline Notes for Flexbox
 
 - Basic Terminology
+
 -- Main-axis
 
 -- Main-start | Main-end

@@ -78,49 +78,49 @@ It is an attempt to document a consistent approach to site development when usin
 
 ## Outline Notes for Flexbox
 
-- Basic Terminology
+Basic Terminology
 
--- Main-axis
+- Main-axis
 
--- Main-start | Main-end
+- Main-start | Main-end
 
--- Main size
+- Main size
 
--- Cross axis
+- Cross axis
 
--- Cross-start | Cross-end
+- Cross-start | Cross-end
 
--- Cross size
+- Cross size
 
-- Properties for the Parent (Flex Container)
+Properties for the Parent (Flex Container)
 
--- Display
+- Display
 
--- Flex-direction
+- Flex-direction
 
--- Flex-wrap
+- Flex-wrap
 
--- Flex-flow
+- Flex-flow
 
--- Justify-content
+- Justify-content
 
--- Align-items
+- Align-items
 
--- Align-content
+- Align-content
 
-- Properties for the Children
+Properties for the Children
 
--- Order
+- Order
 
--- Flex-grow
+- Flex-grow
 
--- Flex-shrink
+- Flex-shrink
 
--- Flex-basis
+- Flex-basis
 
--- Flex
+- Flex
 
--- Align-self
+- Align-self
  
 
 ## FlexBox Froggy

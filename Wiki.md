@@ -170,3 +170,23 @@ Learned how water carrots and poison weeds using CSS grid commands
 - a{1,3}	between one & three
 - a+?a{2,}?	match as few as possible
 - ab|cd	match ab or cd
+
+# Reading 5
+
+## Outline
+
+- Uses Ubuntu
+- Can view logs
+- Used to deploy app
+- Essentially a cloud platform that lets companies and people build
+  deliver, monitor, and scale applications
+- Gets from idea to URL without major infrastructure issues
+- Security and operations are what Heroku does well
+- Data is at the heart of any app — and Heroku provides a secure, scalable database-as-a-service
+- Ecosystems matter - Heroku provides over 175 Add-ons with which to instantly extend applications
+- Enterprise level controls lets companies support and manage portfolios of applications
+- Seamless Heroku and Salesforce data synchronization makes it easy to build innovative apps that span both   platforms
+## Blogs using Heroku
+- Can build your own server in under 50 lines of code
+- Can incorporate tons of libraries and frameworks
+- Use Node.js

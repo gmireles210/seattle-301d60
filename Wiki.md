@@ -190,3 +190,34 @@ Learned how water carrots and poison weeds using CSS grid commands
 - Can build your own server in under 50 lines of code
 - Can incorporate tons of libraries and frameworks
 - Use Node.js
+
+
+# Reading 6
+
+## Outline Notes for Node.JS
+
+- What is Node.js
+  - Node.js is a JS runtime built on Chrome's V8 JS engine. It uses an event-driven, non-blocking I/O model 
+    that makes it lightweight and efficient 
+- Can be downloaded via Node Packet Manager (NPM) or Version Manager
+- Excellent ES6 support
+  - As you’re only targeting one runtime (a specific version of the V8 engine), this means that you can         write your JavaScript using the latest and most modern syntax
+  - It also means that you don’t generally have to worry about compatibility issues, as you would if you       were writing JavaScript that would run in different browsers
+- Recommended to download via npm as it is the worlds largest software registry
+
+### What is Node.js used for?
+- Help automate the process of developing a modern JS app
+- Can be used for anything from bundling JS files and dependencies into static assests, to running test, or   automatic code linting and style checking
+- Node.js allows us to run JS on the server
+
+### What Kind of Apps is Node.js Best For?
+- Great for building API's 
+- Data streaming
+- Large file handling
+
+### Advantages of Node.js
+- It speaks JSON
+- Works well with databases such as MongoDB
+
+### Conclusion
+JavaScript is everywhere, and Node is a vast and expansive subject

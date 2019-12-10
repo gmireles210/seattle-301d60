@@ -221,3 +221,128 @@ Learned how water carrots and poison weeds using CSS grid commands
 
 ### Conclusion
 JavaScript is everywhere, and Node is a vast and expansive subject
+
+
+# Reading 7
+
+## Outline Notes for API's Cont...
+
+### Google API Keys
+- Google offers many different services and many require you to sign up for an API in order to access those 
+  services, such as a geocoding API, Map API, etc.
+- Google is actually really good about monitoring API Keys since they are eventually tied to a live billing 
+  account for someone
+    - What this means is that if you post your API key in the open on GitHub, within a few hours you will 
+      receive an email informing you that Google has found one or more of you API keys unsecured in an
+      online environment
+      
+### Dark Sky API's
+- Dark Sky is a weather-based API that is used to help people look up weather all over the world
+- With a Dark Sky API you can:
+  - Get current weather
+  - Minute-by-minute forecasts out to an hour
+  - Hour-by-hour and day-by-day forecasts out to seven days
+  - Hour-by-hour and day-by-day observations going back decades
+  - Severe weather alerts in the US, Canada, European Union member nations, and Israel
+  - 2 Types of Weather API's
+    - Forecast Request
+      - Returns the current weather forecast for the next week
+    - Time Machine Request
+      - Returns the observesd or forecast weather conditions for a date in the past or future
+  - Dark Sky offers a vast collection of meteorological condititons in 39 different languages
+  - Pricing
+    - The first 1000 API requests you maek everyday are free
+    - Every API request over the free daily limit cost $0.0001
+  - REQUEST TYPE
+    - https://api.darksky.net/forecast/[key]/[latitude],[longitude]
+  - For more info go to:  
+    https://darksky.net/dev/docs
+    
+### Yelp API
+- Request:
+  - GET https://api.yelp.com/v3/businesses/search
+  
+- Response:
+  - {
+  "total": 8228,
+  "businesses": [
+    {
+      "rating": 4,
+      "price": "$",
+      "phone": "+14152520800",
+      "id": "E8RJkjfdcwgtyoPMjQ_Olg",
+      "alias": "four-barrel-coffee-san-francisco",
+      "is_closed": false,
+      "categories": [
+        {
+          "alias": "coffee",
+          "title": "Coffee & Tea"
+        }
+      ],
+      "review_count": 1738,
+      "name": "Four Barrel Coffee",
+      "url": "https://www.yelp.com/biz/four-barrel-coffee-san-francisco",
+      "coordinates": {
+        "latitude": 37.7670169511878,
+        "longitude": -122.42184275
+      },
+      "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/MmgtASP3l_t4tPCL1iAsCg/o.jpg",
+      "location": {
+        "city": "San Francisco",
+        "country": "US",
+        "address2": "",
+        "address3": "",
+        "state": "CA",
+        "address1": "375 Valencia St",
+        "zip_code": "94103"
+      },
+      "distance": 1604.23,
+      "transactions": ["pickup", "delivery"]
+    },
+    // ...
+  ],
+  "region": {
+    "center": {
+      "latitude": 37.767413217936834,
+      "longitude": -122.42820739746094
+    }
+  }
+}
+
+For more info on Yelp API's:
+https://www.yelp.com/developers/documentation/v3/business_search
+
+### The Movie DB API
+- To register for an API key, click the  from within your account settings page. You can also view the       screenshots below for help:
+
+- Click on your avatar or initials in the main navigation ()
+- Click the "Settings" link ()
+- Click the "API" link in the left sidebar ()
+- Click "Create" or "click here" on the API page ()
+- Please note that the API registration process is not optimized for mobile devices so you should access     these pages on a desktop computer and browser.
+
+- Before being issued an API key you will have to agree to our terms of use. You can read that .
+
+- A few useful tips...
+
+- The  are useful to get the static lists of data we use throughout the database. You can find things like   the languages, countries, timezones and translations that we use. The configuration method also holds       useful image information.
+- Understanding the basics of our authentication is useful.
+
+More info about the Movie DB API:
+https://developers.themoviedb.org/3/getting-started/introduction
+
+### Eventful API's
+- There are a lot of API Methods but the 2 most common are:
+  - Event Search
+  - Venue Search
+  
+  Followed by:
+    - Users
+    - Images
+    - Performers
+    - Demand
+    - Categories
+  
+For more info about Eventful API's:
+http://api.eventful.com/docs
+

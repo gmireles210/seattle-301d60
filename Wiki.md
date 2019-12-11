@@ -346,3 +346,23 @@ https://developers.themoviedb.org/3/getting-started/introduction
 For more info about Eventful API's:
 http://api.eventful.com/docs
 
+# Reading 8 
+## SQL Outline
+
+- What is SQLBolt?
+  - SQL, or Structured Query Language, is a language designed to allow both technical and non-technical         users query, manipulate, and transform data from a relational database. And due to its simplicity, SQL     databases provide safe and scalable storage for millions of websites and mobile applications
+- Relational Databases
+  - Represents a collection of related tables
+  - Each of the tables are similar to an Excel spreadsheet, with a fixed number of named columns and any 
+    number of rows of data
+    
+## Resources on SQL
+- https://openlibra.com/en/book/a-primer-on-sql-3rd-edition
+
+- http://www.cheat-sheets.org/sites/sql.su/
+
+## W3Schools
+- Provides resources to practice SQL
+
+  
+

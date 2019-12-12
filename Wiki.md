@@ -365,4 +365,216 @@ http://api.eventful.com/docs
 - Provides resources to practice SQL
 
   
+# Reading 9 
+## Refactoring
+
+### Concepts of Functional Programming in JS
+- What is functional programming?
+  - Functional programming is a programming paradigm — a style of building the structure and elements of       computer programs — that treats computation as the evaluation of mathematical functions and avoids         changing-state and mutable data
+  
+### Pure Functions
+- It returns the same result if given the same arguments (it is also referred as deterministic)
+- It does not cause any observable side effects
+- It returns the same result if given the same arguments
+
+### Immutability
+- When data is immutable, its state cannot change after it’s created. If you want to change an immutable     object, you can’t. Instead, you create a new object with the new value
+- In Javascript we commonly use the for loop
+- With recursion, we keep our variables immutable
+
+### Referential Transparency
+- Basically, if a function consistently yields the same result for the same input, it is referentially       transparent
+
+### Functions as First-Class Entities
+- The idea of functions as first-class entities is that functions are also treated as values and used as     data
+- Functions as first-class entities can
+  - refer to it from constants and variables
+  - pass it as a parameter to other functions
+  - return it as result from other functions
+  
+### Higher-Order Functions
+- When we talk about higher-order functions, we mean a function that either
+  - takes one or more functions as arguments
+  - returns a function as its result
+  
+### Map
+- The idea of map is to transform a collection
+- The map method transforms a collection by applying a function to all of its elements and building a new     collection from the returned values
+
+### Reduce
+- The idea of reduce is to receive a function and a collection, and return a value created by combining the   items
+- Another way to get the total amount is to compose map and reduce
+
+
+## Refactoring JavaScript for Performance and Readability
+### Scenario 1
+
+// Unrefactored code
+
+const URLstore = [];
+
+function makeShort(URL) {
+  const rndName = Math.random().toString(36).substring(2);
+  URLstore.push({[rndName]: URL});
+  return rndName;
+}
+
+function getLong(shortURL) {
+  for (let i = 0; i < URLstore.length; i++) {
+    if (URLstore[i].hasOwnProperty(shortURL) !== false) {
+      return URLstore[i][shortURL];
+    }
+  }
+}
+
+//////
+
+// Refactored code
+
+const URLstore = new Map(); // Change this to a Map
+
+function makeShort(URL) {
+  const rndName = Math.random().toString(36).substring(2);
+  // Place the short URL into the Map as the key with the long URL as the value
+  URLstore.set(rndName, URL);
+  return rndName;
+}
+
+function getLong(shortURL) {
+  // Leave the function early to avoid an unnecessary else statement
+  if (URLstore.has(shortURL) === false) {
+    throw 'Not in URLstore!';
+  }
+  return URLstore.get(shortURL); // Get the long URL out of the Map
+}
+
+### Scenario 2
+
+// Unrefactored code
+
+const friendlyWords = require('friendly-words');
+
+function randomPredicate() {
+  const choice = Math.floor(Math.random() * friendlyWords.predicates.length);
+  return friendlyWords.predicates[choice];
+}
+
+function randomObject() {
+  const choice = Math.floor(Math.random() * friendlyWords.objects.length);
+  return friendlyWords.objects[choice];
+}
+
+async function createUser(email) {
+  const user = { email: email };
+  user.url = randomPredicate() + randomObject() + randomObject();
+  await db.insert(user, 'Users')
+  sendWelcomeEmail(user);
+}
+
+//////
+
+// Refactored code
+
+const friendlyWords = require('friendly-words');
+
+const generateURL = user => {
+  const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+  user.url = `${pick(friendlyWords.predicates)}-${pick(friendlyWords.objects)}` +
+    `-${pick(friendlyWords.objects)}`; // This line would've been too long for linters!
+};
+
+async function createUser(email) {
+  const user = { email: email };
+  // The URL-creation algorithm isn't important to this function so let's abstract it away
+  generateURL(user);
+  await db.insert(user, 'Users')
+  sendWelcomeEmail(user);
+}
+
+### Strategies
+
+function showProfile(user) {
+  if (user.authenticated === true) {
+    // ..
+  }
+}
+
+// Refactor into ->
+
+function showProfile(user) {
+  // People often inline such checks
+  if (user.authenticated === false) { return; }
+  // Stay at the function indentation level, plus less brackets
+}
+
+//////
+
+function searchGroups(name) {
+  for (let i = 0; i < continents.length; i++) {
+    for (let j = 0; j < continents[i].length; j++) {
+      for (let k = 0; k < continents[i][j].tags.length; k++) {
+        if (continents[i][j].tags[k] === name) {
+          return continents[i][j].id;
+        }
+      }
+    }
+  }
+}
+
+// Refactor into ->
+
+function searchGroups(name) {
+  for (let i = 0; i < continents.length; i++) {
+    const group = continents[i]; // This code becomes self-documenting
+    for (let j = 0; j < group.length; j++) {
+      const tags = group[j].tags;
+      for (let k = 0; k < tags.length; k++) {
+        if (tags[k] === name) {
+          return group[j].id; // The core of this nasty loop is clearer to read
+        }
+      }
+    }
+  }
+}
+
+
+//////
+
+function cacheBust(url) {
+  return url.includes('?') === true ?
+    `${url}&time=${Date.now()}` :
+    `${url}?time=${Date.now()}`
+}
+
+// Refactor into ->
+
+function cacheBust(url) {
+  // This throws an error on invalid URL which stops undefined behaviour
+  const urlObj = new URL(url);
+  urlObj.searchParams.append('time', Date.now); // Easier to skim read
+  return url.toString();
+}
+
+### It's important to get your code right the first time because in many businesses there isn't much value     in refactoring. Or at least, it's hard to convince stakeholders that eventually uncared for codebases       will grind productivity to a halt
+
+## Promise
+### There are 5 static methods in the Promise class
+- Promise.all
+- Promise.allSettled
+- Promise.race
+- Promise.resolve/reject
+- Promise.reject
+
+### Summary of Promise
+Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
+Promise.allSettled(promises) (recently added method) – waits for all promises to settle and returns their results as an array of objects with:
+state: "fulfilled" or "rejected"
+value (if fulfilled) or reason (if rejected).
+Promise.race(promises) – waits for the first promise to settle, and its result/error becomes the outcome.
+Promise.resolve(value) – makes a resolved promise with the given value.
+Promise.reject(error) – makes a rejected promise with the given error.
+
+
+
+
 

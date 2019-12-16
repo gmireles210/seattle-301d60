@@ -601,6 +601,38 @@ Promise.reject(error) – makes a rejected promise with the given error.
   - Range
   - Type
  
-
+ 
+ # Reading 11 EJS
+ 
+ ## EJS
+ 
+ ### What is EJS?
+ EJS stands for Embedded JavaScript
+ 
+ ### EJS to Template your Node App
+ - File Structure
+ - Node Set-up
+ - Start Up Server
+ 
+ ### EJS Partials
+ - Footer.ejs 
+ - Head.ejs
+ - Header.ejs
+ 
+ ### Using EJS Partials
+ - Now we have our partials defined, all we have to do is call them in the files that we need them. 
+ - Let's go into index.ejs and about.ejs and use them in there. We will also define the full width and sidebar layouts here using the good old Bootstrap grid
+ - Using Partials The syntax to use an EJS partial is: <% include FILENAME %>
+ - The path to the partial is relative to the current file
+ 
+ ### Other aspects of EJS to Consider
+ - Single Variable
+ - Looping Over Data
+ - Advanced Layouts
+ 
+## Conclusion:
+- EJS let's us spin up quick applications when we don't need anything too complex 
+- By using partials and having the ability to easily pass variables to our views, we can build some great     applications quickly
+ 
 
 

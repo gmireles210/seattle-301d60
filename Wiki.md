@@ -725,7 +725,42 @@ Promise.reject(error) – makes a rejected promise with the given error.
 - POST_CONTENT
 
 
+# Reading 13 Sending Form Data
 
+## Overview of Form Data
+
+### Client/Server Architecture
+- The web is based on a basic client/server architecture
+  - Client sends a req to a server using HTTP
+  - Server answers the req using the same HTTP
+  - On the client side, an HTML form is no more that an easy user-friendly way to configure an HTTP request     that sends data to a server
+  - This then allows the user to provide info to be delivered in the HTTP req
+  
+### The ACTION Attribute
+- Defines where the data gets sent. Its value must be a valid relative or absolute URL
+- If this attribute isn't provided, the data will be sent to the URL of the page containing the form; the     current page
+
+### The METHOD Attribue
+- The method attribute defines how data is sent
+- The HTTP protocol provides several ways to perform a request; HTML form data can be transmitted via a       number of different ones, the most common HTTP request methods are the GET method and the POST method
+
+### The GET Method
+- The GET method is the method used by the browser to ask the server to send back a given resource: "Hey     server, I want to get this resource."
+
+### The POST Method
+- The POST method is a little different. It's the method the browser uses to talk to the server when asking   for a response that takes into account the data provided in the body of the HTTP request: "Hey server,     take a look at this data and send me back an appropriate result." 
+- If a form is sent using this method, the data is appended to the body of the HTTP request
+
+### Viewing HTTP Requests
+- HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the   Firefox Network Monitor or the Chrome Developer Tools)
+- The only thing displayed to the user is the URL called
+- IMPORTANT!!!
+  - With a GET request the user will see the data in their URL bar, but with a POST request they won't
+
+### Conclusion
+- Sending form data can be easy, but securing the overall application can be hard
+- It is possible to perform client side data validation but the server can't trust this validation because   it has no way to truly know what really happens on the client side
+- Read documentation about the tools you are going to implement to better understand their functionality 
 
 
 

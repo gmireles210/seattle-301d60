@@ -787,6 +787,28 @@ Promise.reject(error) – makes a rejected promise with the given error.
 - Third Normal Form – the table is in second normal form and all of its columns are not transitively         dependent on the primary key
 
 
+# Reading 15 Diversity and Inclusion
+
+- Large and very apparent gaps in the tech world amongst genders
+- 1984, 37% of CS grads were women
+- 2016, 18% of CS grads were women
+  - Over 30 yrs, the gap still hasn't closed due to gender inequalities
+### The Cause?
+
+- Early computers were used for gaming and the market was aimed at boys and men, therefore boys and men       were exposed to these technologies, where girls and women were not
+- Imperical evidence shows that due to marketing strageties, access to tech, and opportunities set the       stage for this gap to develop and grow
+- Even to this day there is a subtle message to women that tech isn't a place for them, which is extremely   sad as well as unfair, since women have been behind some of the biggest advancements in computing
+
+### The Data to Back it Up
+- https://informationisbeautiful.net/visualizations/diversity-in-tech/
+
+### Cornell University Study
+- https://arxiv.org/abs/1906.07883
+
+### Gap Chart
+- https://cdn.statcdn.com/Infographic/images/normal/4467.jpeg
+
+
 
 
 

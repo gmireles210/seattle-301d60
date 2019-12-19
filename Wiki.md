@@ -763,6 +763,29 @@ Promise.reject(error) – makes a rejected promise with the given error.
 - Read documentation about the tools you are going to implement to better understand their functionality 
 
 
+# Database Normalization 
+- What is DB Normalization?
+  - Database normalization is a process used to organize a database into tables and columns
+  - The overall idea is that a table should be about a specific topic and that and only supporting topics       included
+- There are 3 normal forms most databases adhere to using
+  - First is to minimize duplicate data
+  - Second is to minimize or avoid data modification issues
+  - Third is to simplify queries
+  
+## Data Duplication and Modification Anomalies
+- Insert Anomaly
+- Update Anomaly
+- Delete Anomaly
+
+## Search and Sort Issues
+- Query and Sort
+
+## Definition of DB Normilization
+- There are three common forms of database normalization: 1st, 2nd, and 3rd normal form. They are also       abbreviated as 1NF, 2NF, and 3NF respectively
+- First Normal Form – The information is stored in a relational table with each column containing atomic     values. There are no repeating groups of columns
+- Second Normal Form – The table is in first normal form and all the columns depend on the table’s primary   key
+- Third Normal Form – the table is in second normal form and all of its columns are not transitively         dependent on the primary key
+
 
 
 
